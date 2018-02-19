@@ -1,9 +1,27 @@
-\documentclass[review]{elsarticle}
+\documentclass{elsarticle}
 
 % KC added - Sandra said 18 page limit but not to worry about format..
 \usepackage[margin=2.5cm]{geometry}
 
-\usepackage{lineno,hyperref}
+\usepackage{lineno}
+\usepackage[colorlinks=true,
+           urlcolor=blue,
+           citecolor=blue,
+           linkcolor=blue,
+           % bookmarksopen,
+           % bookmarksopenlevel=1,
+           % pdftitle={},
+           % pdfauthor={Joe Doe},%
+           % pdfsubject={},%
+           % pdfkeywords={provenance, workflows},
+           bookmarks=false,
+           bookmarksnumbered,% For PDF navigation
+           % backref=page,
+           % pagebackref=page,
+           linktocpage=true
+           ]{hyperref}
+
+
 \usepackage{color}
 
 \modulolinenumbers[5]
@@ -67,7 +85,7 @@
 \begin{frontmatter}
 
 %Capturing the ``\wt\ '' of Computational Claims: 
-\title{Computing Environments for Reproducibility: Capturing the ``\wt''}
+\title{\textbf{Computing Environments for Reproducibility:\\Capturing the ``\wt''}}
 % \tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
 
 %% Group authors per affiliation:
@@ -220,7 +238,7 @@ computing power have made it possible to model material behavior on a large rang
 time scales~\cite{yip07handbook}. Consequently, computational tools are starting to become an integral part
 of designing new materials~\cite{council04accelerating}. For example, quantum-mechanics-based calculation tools 
 are routinely used in the development of structural metals and semiconductors, among other materials~\cite{curtarolo13high}. 
-Increasingly, these computational processes are based on novel new machine
+Increasingly, these computational processes are based on new machine
 learning methods to construct rich models of materials properties~\cite{hill16materials, ward16materials, rajan05materials}. 
 With such changes, researchers are increasingly in need of new methods
 for publishing not only references to the data used to derive results
@@ -239,14 +257,15 @@ exact steps taken within the \wt\ environment.
 
 \subsection{Astronomy}
 
-Detailed analysis and visualization of astronomical datasets, particularly those generated from computational simulations, requires both access to the original underlying data (or catalogs of reduced data products) and access to computing resources.  One particular example being explored by the \wt\ project is that of studying the formation of the first stars and galaxies in the universe (see, for instance,~\cite{2015MNRAS.452.2822S}), but another common use case is that of galaxy formation~\citep{2014ApJS..210...14K}.  These simulations are conducted on large-scale computing resources; typically, the analysis utilizes community packages such as \texttt{yt}~\citep{2011ApJS..192....9T} and, through the development of scripts and interactive analysis sessions, produces either publication-level plots or reduced data products that can be reanalyzed at a later date.  In the case of observational astronomy, multiple datasets may need to be synthesized to create a unified understanding of either a particular class of object or a region on the sky; in many cases, this will require small ``slices'' of data from many different sources ( , from several public registries) to be combined.
+Detailed analysis and visualization of astronomical datasets, particularly those generated from computational simulations, requires both access to the original underlying data (or catalogs of reduced data products) and access to computing resources.  One particular example being explored by the \wt\ project is that of studying the formation of the first stars and galaxies in the universe (see, for instance,~\cite{2015MNRAS.452.2822S}), but another common use case is that of galaxy formation~\citep{2014ApJS..210...14K}.  These simulations are conducted on large-scale computing resources; typically, the analysis utilizes community packages such as \texttt{yt}~\citep{2011ApJS..192....9T} and, through the development of scripts and interactive analysis sessions, produces either publication-level plots or reduced data products that can be reanalyzed at a later date.  In the case of observational astronomy, multiple datasets may need to be synthesized to create a unified understanding of either a particular class of object or a region of the sky; in many cases, this will require small ``slices'' of data from many different sources (e.g., from several public registries) to be combined.
 
-For the specific case of analysis and visualization of simulations, \wt\ will provide access to a collaborative environment, where not only can scripts and analysis methods be transplanted seamlessly between datasets, but can be collaborated on between individuals -- such as an advisor and a student.  Researchers will be able to conduct simulations, make available the results of those simulations inside the \wt\ environment, and then conduct their analysis in that environment directly.  The scripts that produce plots and analysis products for publication purposes will be combined with these datasets to form a tale, which can then be accessed, remixed, and modified for subsequent analysis either by those researchers or by others.  This will open up new avenues for discovery, which at present is constrained both by the difficulty of providing access to data and by the difficulties inherent in collaborating on the specific methods of analysis and visualization.
+For the specific case of analysis and visualization of simulations, \wt\ will provide access to a collaborative environment, where scripts and analysis methods can not only be transplanted seamlessly between datasets, but where they can be collaborated on between individuals -- such as an advisor and a student.  Researchers will be able to conduct simulations, make available the results of those simulations inside the \wt\ environment, and then conduct their analysis in that environment directly.  The scripts that produce plots and analysis products for publication purposes will be combined with these datasets to form a tale, which can then be accessed, remixed, and modified for subsequent analysis either by those researchers or by others.  This will open up new avenues for discovery, which at present is constrained both by the difficulty of providing access to data and by the difficulties inherent in collaborating on the specific methods of analysis and visualization.
 
 \subsection{Archaeology}
 
 
-A set of grand challenges in archaeology have been identified by the community through a crowd-sourced effort and synthesis workshop \cite{kintigh2014granda}. While archaeological data and research are essential to addressing fundamental questions, e.g., about the origin and trajectories of civilizations or the response of societies to climate change, the community lacks the capacity for acquiring, managing, analyzing, and synthesizing datasets needed to address such important questions. This in turn led to recommendations for computational infrastructure, tools, and scientific case studies to demonstrate archaeology's ability to contribute to transdisciplinary research on long-term social dynamics~\cite{kintigh2015cultural}. 
+A set of grand challenges in archaeology\footnote{We adopt the spelling of the Society for American Archaeology \cite{little06}.}
+ have been identified by the community through a crowd-sourced effort and synthesis workshop \cite{kintigh2014granda}. While archaeological data and research are essential to addressing fundamental questions, e.g., about the origin and trajectories of civilizations or the response of societies to climate change, the community lacks the capacity for acquiring, managing, analyzing, and synthesizing datasets needed to address such important questions. This in turn led to recommendations for computational infrastructure, tools, and scientific case studies to demonstrate archaeology's ability to contribute to transdisciplinary research on long-term social dynamics~\cite{kintigh2015cultural}. 
 
 One such project is SKOPE~\cite{skope}, which is developing an online resource and toolkit for paleoenvironmental data and models that will enable researchers to easily discover, explore, visualize, and synthesize knowledge of environmental factors most relevant to humans in the past. SKOPE's focus on transparent, reproducible research, facilitated by different forms of provenance, makes it an ideal partner project and science driver for \wt.
 % For example, in connection with the \wt\ science working group focusing on computational archaeology, we are offering a 2017 summer internship project that will focus on ``telling the whole tale behind a climate reconstruction based on PaleoCAR", i.e., which will create integrated representations of various dimensions of provenance of the results of a particular scientific study \cite{bocinsky2014000year}. 
@@ -256,7 +275,7 @@ Finally, there are several community efforts such as ``How To Do Archaeological 
 
 \section{Toward Reproducibility}\label{sec:reproducibility}
 
-As we noted at the outset, the complexity and details of the computational steps that gave rise to the scientific conclusions is typically impossible to capture in a traditional publication~\cite{victoria01}. However, increasing the transparency of computational findings falls on several stakeholders. As researchers move toward greater reproducibility it is essential that funding agencies, publishers, and local incentives align to support this transition. Steps are being taken at all stakeholder levels, yet open questions remain. 
+As we noted at the outset, the complexity and details of the computational steps that gave rise to the scientific conclusions is typically impossible to capture in a traditional publication~\cite{victoria01}. However, increasing the transparency of computational findings falls on several stakeholders. As researchers move toward greater reproducibility it is essential that funding agencies, publishers, and local incentives align to support this transition. Steps are being taken at all stakeholder levels, yet open questions remain. % BL: Such as?
 
 Researchers were the first to implement new practices that encompassed reproducibility in computational research. The earliest to our knowledge was the introduction of ``really reproducible research'' in 1992 by the Stanford Exploration Project~\cite{victoria02} which introduced reproducibility standards for electronic documents that contain computational results. Most recently~\cite{victoria03} exhorted the community to ensure that the digital artifacts needed for verification (i.e. data, code, workflows) are made available to the community in a usable form with the publication. The recommendations were:
 
@@ -291,7 +310,7 @@ The NSF held an agency-wide Director's Symposium ``Robust and Reliable Science: 
 \item Recommendation 3: Support research into effective reproducibility: Develop research programs that support computational reproducibility and computationally-enabled discovery, as well as cyberinfrastructure that supports reproducibility.
 \end{itemize}
 
-Scientific societies, in part in their role as publishers, are taking steps toward reproducibility. The ACM has implemented a system of badging for publications that have digital artifacts available~\cite{victoria13}. In November of 2016 IEEE held a workshop on publication practices for reproducibility, ``The Future of Research Curation and Research Reproducibility''~\cite{victoria14}.
+Scientific societies, in part in their role as publishers, are taking steps toward reproducibility as well. The ACM has implemented a system of badging for publications that have digital artifacts available~\cite{victoria13}. In November of 2016 IEEE held a workshop on publication practices for reproducibility, ``The Future of Research Curation and Research Reproducibility''~\cite{victoria14}.
 
 Finally, the National Academies of Sciences, Engineering, and Medicine, released a report in April 2017, Fostering Integrity in Research~\cite{NAP21896}, which contained two recommendations regarding reproducible research:
 
@@ -354,11 +373,11 @@ and accountability.
 % \end{itemize}
 
 
-\noindent A Dagstuhl seminar on \emph{Reproducibility of Data-Oriented Experiments} summarizes its findings as follows \cite{freire2016reproducibility}:
+\noindent A Dagstuhl seminar on \emph{Reproducibility of Data-Oriented Experiments} \cite {freire2016reproducibility} summarizes:
 \begin{itemize}
 \item
 Transparency, openness, and reproducibility are vital features of science. Scientists embrace these features as disciplinary norms and values, and it follows that they should be integrated into daily research activities. These practices give confidence in the work; help research as a whole to be conducted at a higher standard and be undertaken more efficiently; provide verifiability and falsifiability; and encourage a community of mutual cooperation. They also lead to a valuable form of paper, namely, reports on evaluation and reproduction of prior work. Outcomes that others can build upon and use for their own research, whether a theoretical construct or a reproducible experimental result, form a foundation on which science can progress. Papers that are structured and presented in a manner that facilitates and encourages such post-publication evaluations benefit from increased impact, recognition, and citation rates.
-Experience in computing research has demonstrated that a range of straightforward mechanisms can be employed to encourage authors to produce reproducible work. These include: requiring an explicit commitment to an intended level of provision of reproducible materials as a routine part of each paper's structure; requiring a detailed methods section; separating the refereeing of the paper's scientific contribution and its technical process; and explicitly encouraging the creation and reuse of open resources (data, or code, or both).
+Experience in computing research has demonstrated that a range of straightforward mechanisms can be employed to encourage authors to produce reproducible work. These include: requiring an explicit commitment to an intended level of provision of reproducible materials as a routine part of each paper's structure; requiring a detailed methods section; separating the refereeing of the paper's scientific contribution and its technical process; and explicitly encouraging the creation and reuse of open resources (data, code, or both).
 \end{itemize}
 
 As noted in several of the recommendations discussed above, new research and new technologies are needed to implement reproducible computational research, and the \wt\ represents one initiative to address these gaps in our research and dissemination infrastructure. 
@@ -368,15 +387,15 @@ As noted in several of the recommendations discussed above, new research and new
 
 \section{Design Requirements}\label{sec:design}
 
-The \wt\ project is intended to support the lifecycle of data. This means that all parts of the lifecycle, from data ingest or creation through to publication of the resulting scholarly objects such as data, code, workflows, and manuscripts, are managed within the \wt\ framework. Our discussion of design and implementation therefore reflects an integrated view of the generation of computational scientific findings that includes all these research activities. This integrated approach to research is crucial to enable reproducibility and downstream re-use of scholarly objects. 
+The \wt\ project is intended to support the lifecycle of data. This means that all parts of the lifecycle, from data ingest or creation through to publication of the resulting scholarly objects such as data, code, workflows, and manuscripts, should be manageable within the \wt\ framework. Our discussion of design and implementation therefore reflects an integrated view of the generation of computational scientific findings that includes all these research activities. This integrated approach to research is crucial to enable reproducibility and downstream re-use of scholarly objects. 
 
 % [delete this since I largely encapsulated it above] By tying together remote storage, access to resources, and publishing, while removing barriers to combining, processing, and analyzing data, the  \wt\ environment aims to provide a researcher-oriented system for the full lifecycle of scientific inquiry, from experimental design through to publication. 
 
 To provide such support, \wt\ incorporates data ingestion, 
-identity management, data publication, and the deployment of user-facing ``frontends.'' We use the term ``frontend'' to describe any environment in which data can be operated on, ranging from
-terminals to specialized analysis programs. 
-Examples of common frontends include interactive notebooks,
-HTML5 webapps, and domain-specific GUIs.
+identity management, data publication, and the deployment of user-facing ``frontends.''  We use the term \emph{frontend} to describe any environment in which data can be operated on, ranging from
+terminals with a command-line interface to specialized analysis programs. 
+Examples of common frontends include interactive notebooks (e.g., Jupyter, RStudio),
+HTML5 web-apps, and domain-specific GUIs (e.g., OpenRefine).
 We briefly describe the requirements
 in several core areas to motivate the architecture presented in the following section.
 
@@ -409,7 +428,7 @@ on four commonly used data sources:
 
 \begin{itemize}
 	\item \textbf{Data Repositories:} 
-    There is an increase number of domain-specific, institution, project, and publisher data repositories. 
+    There is an increasing number of domain-specific, institutional, project-centric, and publisher-owned data repositories. 
     Many data repositories, including the Materials Data Facility (MDF) and DataONE~\cite{michener15dataone}(a federation of repositories), support common interfaces for accessing published metadata and data.
     These interfaces include the 
     Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)~\cite{oaipmh}
@@ -435,10 +454,10 @@ on four commonly used data sources:
 % We use the term ``frontend'' to describe any environment in which
 % data can be operated on, ranging from terminals to specialized analysis programs. 
 % Examples of common frontends include 
-% interactive notebooks, HTML5 webapps, and domain-specific GUIs. 
+% interactive notebooks, HTML5 web-apps, and domain-specific GUIs. 
 As mentioned above, we use the term \emph{frontend} to describe any environment in which
-data is operated on, ranging from terminals to specialized analysis programs. The choice of frontend used for a specific scientific analysis
-may be based on analysis requirements, data type, or most commonly user preference.
+data is operated on, ranging from command-line terminals to specialized analysis programs. The choice of frontend used for a specific scientific analysis
+may be based on analysis requirements, data type, or user preference.
 One example frontend that is commonly used by researchers is the Jupyter notebook environment~\cite{jupyter}. 
 Jupyter notebooks support multiple language backends (Python, R, Julia, and many others), widget development for interactive exploration, file editing, and shell activity within a unified, web-based environment. 
 % Jupyter notebooks provide enormous
@@ -486,8 +505,8 @@ and publication of scholarly objects are correctly authorized.
 
 When designing the authentication model it is desirable that researchers 
 are able to sign in once, 
-access a range of supported services, and have their identity (and permissions) 
-be used (securely) across services. 
+access a range of supported services, and have their identity and permissions 
+be used securely across services. 
 Given the rate of identity proliferation, the authentication system should allow
 researchers to authenticate with their preferred identity (e.g., campus identity, 
 ORCID, Google account)
@@ -499,7 +518,7 @@ To enable extensibility to new tools and services, \wt\ must support standard au
 and authorization protocols through which external services and clients can easily integrate
 with the system.
 The \wt\ focuses on acting upon research data, we therefore consider 
-issues related to sensitive data (e.g., medical or government data) outside
+issues related to sensitive data (e.g., restricted medical or government data) outside
 the scope of this work.
 
 \subsection{Reproducibility: Defining a Tale}
@@ -507,16 +526,16 @@ the scope of this work.
 The final, and perhaps most important, aim of the \wt\ is to 
 define a model for reproducibility by capturing the data, methods, metadata, and provenance of a particular research activity within the system. We refer to this entity as
 a \emph{tale}. As has been observed time and again, successful adoption of 
-new models are often related to the ease by which they can be used. As such, 
-it is crucial that capturing, publishing, and replaying a tale is simple and unobtrusive: the relevant
+new models is often related to the ease by which they can be used. As such, 
+it is crucial that capturing, publishing, and ``replaying'' a tale is simple and unobtrusive: the relevant
 provenance of an analysis should be transparently recorded 
 without requiring users to manage or record the data and computational
 process used in their work.
-Having created a tale, researchers should be able to simply share
+Having created one or more tales, researchers should be able to simply share
 them with others, publish them to connected repositories, associate
-a persistent identifier, and link them to publications. Other researchers
+persistent identifiers, and link them to publications. Other researchers
 who access a tale should, just as simply, be able to instantiate a version
-of the tale and execute it in the same state as it was when published. Tales also contain Intellectual Property metadata with licensing information for its components (data, scripts, workflow information, etc), which is crucial to enabling ease of re-use and reproducibility, as well as broad access.
+of the tale and execute it in the same state as it was when published. Tales also contain Intellectual Property metadata with licensing information for its components (data, scripts, workflow information, etc), which is crucial to enabling ease of re-use, reproducibility, and broad access.
 
 
 
@@ -535,7 +554,7 @@ of the platform is shown in Figure~\ref{fig:arch}. Our development philosophy fo
 \subsection{General Architecture}
 At the heart of the \wt\ infrastructure lies the Metadata Management System,
 which creates an abstraction layer between user-facing interfaces and the physical
-location of the data ``bits.'' For this purpose we utilize Girder\cite{girder}---a general purpose framework with a simple data
+location of the data. For this purpose we utilize Girder~\cite{girder}---a general purpose framework with a simple data
 model and REST interface. 
 %Girder supports the creation of dynamic data hierarchies that
 %transparently proxy the referenced data from \emph{Assetstores}---abstractions of raw data
@@ -544,17 +563,17 @@ Using Girder, datasets can be organized into \emph{Collections}, containing \emp
 are a hierarchically nested organizational structure that consist of other
 \emph{Folders} and \emph{Items}. An \emph{Item} is the basic unit of data in the
 system. \emph{Items} live beneath \emph{Folders} and contain zero or more
-\emph{Files}, which represent raw data objects. Each organizational object, i.e.
+\emph{Files}, which represent raw data objects. Each organizational object, i.e., 
 \emph{Collection}, \emph{Folder} and \emph{Item} can be annotated with metadata.
 %in the form of a simple key-value pair or JSON data. 
 Additionally Girder provides
 models for user and group management (\emph{Users}, \emph{Groups}) and an access control model for resource management. 
 Each of these objects is represented by a model with a RESTful
 interface, that can be used to create, store, and retrieve persistent records
-in an internal Mongo database. % via any HTTP-capable client.
+in an internal MongoDB. % via any HTTP-capable client.
 As a result, data is managed entirely by reference. That is, 
 the data stored in external data repositories are completely decoupled
-from the data in \wt, e.g., an \emph{Item} representing an external object (e.g., an HTTP URL, or a file on a Globus endpoint) can be easily copied, renamed, and moved around
+from the data in \wt: e.g., an \emph{Item} representing an external object (e.g., an HTTP URL, or a file on a Globus endpoint) can be easily copied, renamed, and moved around
 Girder's \emph{Folder} structure without performing any operations on the
 actual data. This approach is advantageous as it allows \wt\ to 
 scale to represent very large datasets leaving data management tasks to
@@ -566,11 +585,11 @@ The \wt\ builds upon Girder by providing plugins that:
 \begin{itemize}
   \item Introduce new models for objects specific to the
     project, such as \emph{Recipe}, \emph{Image}, \emph{Tale}, \emph{Instance},
-    \emph{Repository} (see \ref{sec:wt_plugin} for details).
+    \emph{Repository} (see Section~\ref{sec:wt_plugin} for details).
   \item Allow users to execute tasks such as building \emph{Images} from
     \emph{Recipes} and creating \emph{Instances} from \emph{Tales}.
   \item Manage transfers of streams of data from remote \emph{Repositories} into
-    running \emph{Instances} (see \ref{sec:dm_plugin} for details).
+    running \emph{Instances} (see Section~\ref{sec:dm_plugin} for details).
 \end{itemize}
 
 \subsection{The Whole Tale Workflow}
@@ -586,7 +605,7 @@ The registration procedure starts with the creation of a
 \emph{Folder} object to group all the references related to the
 selected dataset (datasets may be comprised of many files and folders). 
 For each of the files provided by the data provider an \emph{Item} is
-created as a child object the main \emph{Folder}. Each \emph{Item} stores the
+created as a child object in the main \emph{Folder}. Each \emph{Item} stores the
 information about the original name of the file, its location, and the protocol to
 access it (e.g., HTTP, Globus, etc.).
 
@@ -611,7 +630,7 @@ the system will provide a shallow copy of that entire
 dataset. As the user interacts with the imported dataset (e.g., in a tale),
 the raw data is copied on-the fly and 
 cached thereafter to create a deep copy of the data. 
-At present the \wt\ supports DataONE and Globus~\cite{chard14efficient} repositories. Additional repositories can be easily added by implementing
+At present the \wt\ supports repository access via DataONE and Globus~\cite{chard14efficient}. Additional repositories can be easily added by implementing
 a simple interface that provides
 the necessary information: name, size, location and access protocol;
 and embedding it within the \emph{Repository} model.
@@ -619,9 +638,8 @@ and embedding it within the \emph{Repository} model.
 The availability of the data and the fact that it can be freely composed 
 into a dynamic dataset through the \emph{Folder} and \emph{Item} hierarchy,
 is a necessary ingredient of the most important artifact that comes out of the
-\wt\ project, which is the \emph{tale} itself. The \emph{tale} is an
-entanglement of a research environment---a frontend and the data. 
-The environment itself is based on a a Docker image---a
+\wt\ project, which is the \emph{tale} itself. A \emph{tale} bundles a frontend and relevant data into a research environment.
+The environment itself is based on a Docker image---a
 lightweight, stand-alone, executable package that includes
 everything needed to run a research environment for a tale.
 In order to ensure that the image can be reconstructed in 
@@ -647,7 +665,7 @@ server application that stores and distributes Docker images. The state of a
 given image is represented within the metadata management system through the
 \emph{Image} model. Once a docker image is successfully built and deposited
 in the Docker registry, it becomes accessible on registered \wt\ compute resources. At that point it is
-available to the user as an executable research environment. The \emph{Image}, which represents the frontend, and the \emph{Folder}, that represents the data, can be at this point combined into a \emph{tale} (see Fig.~\ref{fig:creation}).
+available to the user as an executable research environment. The \emph{Image}, which represents the frontend, and the \emph{Folder}, that represents the data, can then be combined into a \emph{tale} (see Fig.~\ref{fig:creation}).
 
 \begin{figure}[ht!]
 \centering
@@ -659,14 +677,14 @@ available to the user as an executable research environment. The \emph{Image}, w
 \subsection{Web Interface}
 
 The \wt\ is designed to be easy to use and accessible
-to a wide range of users. As such, its primary interface is
+to a wide range of users. Its primary interface is
 a web-based appolciation that allows users to manage data; create, modify, and share frontends for analyzing data; and 
 create, publish, and reproduce tales by linking together datasets
 and frontends. 
 
 % The data management interface provides a comprehensive drag and drop environment 
 % that can be used to discover and manage data. 
-The web interface supports the standard set of file and folder operations  as one would expect in a desktop finder or file manage application (rename, remove, move, etc). 
+The web interface supports the standard set of file and folder operations  as one would expect in a desktop finder or file manager application (rename, move, delete, etc.). 
 Files or datasets can be registered
 from external data repositories (via a search workflow) or dragged and dropped from a user's desktop into the environment. Users can also view their registered files, as well as public datasets that may have been registered by other users. 
  
@@ -707,7 +725,7 @@ It also allows researchers to link together different identities such that
 presentation of one identity enables permissions granted to any identity
 in that set. 
 Second, it supports standard web authentication and authorization protocols
-(e.g., OpenID Connect and OAuth~2) that simplify integration in 
+(e.g., OpenID Connect and OAuth\,2) that simplify integration in 
 \wt\ services and also provides an extensible model by which 
 other related services can leverage \wt\ capabilities. Third, it provides 
 an extensible delegated authorization model by which services (e.g., \wt)
@@ -734,7 +752,7 @@ and MDF.
 \label{sec:dm_plugin}
 
 The \wt\ Data Management System (DMS)\footnote{\url{https://github.com/whole-tale/girder_wt_data_manager/}} is responsible for  managing the ``bits'' that make up the data used in tales. Primary data, which is data that is sourced from external services, does not, in general, come with a uniform access mechanism. Each external service is free to define its own rules and mechanisms of access. The DMS addresses this issue by providing a POSIX interface to primary data. 
-This interface allows tales to act upon diverse, distributed data as if it were local.
+This interface allows tales to act upon diverse, distributed data as if the data were local.
 A secondary goal of the DMS is to provide data locality. Primary data services are assumed to be geographically distributed, as such, there is significant latency when data is accessed directly. The DMS provides an abstraction layer that hides these differences. The main components of the DMS are:
 
 \begin{itemize}
@@ -766,12 +784,12 @@ and two lightweight helper daemons: a reverse proxy that is responsible for rout
 the tale and its data dependencies. An instantiation of the tale is a multi-step process:
 \begin{enumerate}
 	\item A request for a \emph{tale} instance is sent from the Metadata Management System (MMS) to the TMD running on a computational cluster, along with credentials (access token).
-    \item TMD creates a docker volume using the ``local'' driver, which is basically an empty POSIX directory inside the host's filesystem.
-    \item TMD creates a docker instance using an \emph{Image} referenced by the \emph{tale} and the volume created in the previous step.
-    \item TMD creates the FUSE layer using the \emph{Folder} referenced by the \emph{tale} and mounts it in the mountpoint corresponding to the docker volume.
-    \item TMD starts the docker container and registers the internal port by which the container can be accessed with the reverse proxy.
-    \item TMD returns basic information about the container (routing path, container id, host where it is running, etc.) to the MMS.
-    \item The MMS creates an \emph{Instance} model to store the information provided by TMD and exposes it to web interface.
+    \item The TMD creates a docker volume using the ``local'' driver, which is basically an empty POSIX directory inside the host's filesystem.
+    \item The TMD creates a docker instance using an \emph{Image} referenced by the \emph{tale} and the volume created in the previous step.
+    \item The TMD creates the FUSE layer using the \emph{Folder} referenced by the \emph{tale} and mounts it in the mountpoint corresponding to the docker volume.
+    \item The TMD starts the docker container and registers the internal port by which the container can be accessed with the reverse proxy.
+    \item The TMD returns basic information about the container (routing path, container id, host where it is running, etc.) to the MMS.
+    \item The MMS creates an \emph{Instance} model to store the information provided by the TMD and exposes it to the web interface.
 \end{enumerate}
 
 \begin{figure}[ht!]
@@ -780,43 +798,44 @@ the tale and its data dependencies. An instantiation of the tale is a multi-step
 \caption{An instantiation of a tale. \label{fig:instance}}
 \end{figure}
 
-The \emph{Instance} object created during the tale instantiation is a regular RESTful object. It allows the UI to query information about running tales, update, suspend, or delete them. 
+The \emph{Instance} object created during the tale instantiation is a regular RESTful object. It allows the UI to query information about running tales, and to update, suspend, or delete them. 
 
 Tales can host \emph{any} frontend as they are based on a generic
 Docker container, the only requirements of which are an open port
 for user access and a mountpoint for the \wt\ FUSE filesystem. 
-At present, pre-configured Jupyter and RStudio frontends are provided. These two frontends were prioritized based on the needs of users.  
+At present, pre-configured Jupyter and RStudio frontends are provided. These types of frontends were prioritized based on user needs and popularity.  
 While users can create their own frontends, we will continue to add base
 frontends to simplify use. 
 
-\wt\ containers are executed on OpenStack virtual machine
+\wt\ containers are executed on OpenStack virtual machines
 (running Container Linux). On each VM we deploy Docker Swarm 
 to manage the execution and scheduling of Docker containers
 on our resource cluster. We use cloud resources at 
 the National Center for Supercomputing Applications (NCSA), 
-Texas Advanced Computing Center (TACC), and San Diego Supercomputing
+Texas Advanced Computing Center (TACC), and San Diego Supercomputer
 Center (SDSC). 
 There are well-established security risks of running containers
 on shared infrastructure. To mitigate these risks we require that
 users users upload source images to be built on-demand and
-we disable intra container communication to limit possible interference
+we disable intra-container communication to limit possible interference
 between containers. In future work we intend to investigate 
 methods for validating and certifying containers.
 
 \subsection{Tale Representation}
-Tales are defined by their execution environment, the data used, and metadata related to that tale. While we are actively developing a formal specification for a tale, we present here details regarding each aspect of the tale.
+Tales are defined by their execution environment, the data used, and metadata related to the tale. 
+The key elements of a tale are as follows:
 
-\textbf{Environment:} captures the active components of a tale. For this purpose we rely on a Docker image and container. The tale 
+\textbf{Environment:} The environment captures the active components of a tale. For this purpose we rely on a Docker image and container. The tale 
 maintains a reference to a Git repository (including a hash to the specific commit version). This Git repository is used as the working directory to build the docker image. 
 The environment includes a name, a Git repository URL, a commit ID that references specific version of the repository, and an optional configuration object that defines specific parameters passed to Docker when running the container. 
 
-\textbf{Data:} is represented by a set of Girder objects (folders, items, files). Each object is described with several internal descriptors (e.g., name, size, child-parent relations, uuid, creation/modification time etc). Those that are most important to capture in a tail are the the source URL and access protocol (e.g.,  https://website/file1, globus://endpoint/file1), provider (e.g., DataONE, Globus, etc.), unique identifier (e.g., URN in DataONE, or DOI used by publication repository), and in the future an optional checksum. Given these objects are mapped to a filesystem, each object must also include its size and a POSIX compatible name. The name includes the full path (with respect to the mount point) as the tale must recreate the entire directory structure. 
+\textbf{Data:} is represented by a set of Girder objects (folders, items, files). Each object is described with several internal descriptors (e.g., name, size, child-parent relations, uuid, creation/modification time etc.). Those that are most important to capture in a tale are the the source URL and access protocol (e.g.,  \texttt{https://website/file1}, \texttt{globus://endpoint/file1}), provider (e.g., DataONE, Globus, etc.), unique identifier (e.g., URN in DataONE, or DOI used by publication repository), and in the future an optional checksum. Given these objects are mapped to a filesystem, each object must also include its size and a POSIX compatible name. The name includes the full path (with respect to the mount point) as the tale must recreate the entire directory structure. 
 
 \textbf{Metadata:} represents information about the tale that is
 not specifically related to the environment or data. We expect
 that tale metadata will grow over time based on user needs and 
 tale usage.  At present, tales may include metadata that describes
-the title, authors, description, icon, illustration, category (e.g., tags), publication status, as well as licensing information for all artifacts~\cite{stodden_legal_2009}
+the title, authors, description, icon, illustration, category (e.g., tags), publication status, as well as licensing information for all artifacts~\cite{stodden_legal_2009}.
 
 
 %Running tale instances may be consider as an exploratory environment in which a researcher uses a frontend to interact with the data.
@@ -833,7 +852,7 @@ the title, authors, description, icon, illustration, category (e.g., tags), publ
 Scientific reproducibility is becoming an increasingly widespread
 concern and stakeholders are exploring a range of 
 approaches to address challenges. For example, 
-data repositories now support data analysis~\cite{SciServer,TerraRef} 
+data repositories now support data analysis~\cite{SciServer,TerraRef}, 
 science gateways facilitate the capture of rich provenance
 information~\cite{gesing15gateways},
 and publishers enable verification of figures and computational 
@@ -843,7 +862,7 @@ Science gateways allow users to conduct (generally domain-specific) analyses tha
 advanced computing infrastructure. They provide intuitive user interfaces that abstract
 the complexities of submitting jobs via queue submission systems or
 instantiating virtual computing environments for executing GUI-based tools~\cite{mclennan10hub}. Given the gateway's position at the
-center of all analysis it is possible
+center of all analysis, it is possible
 to capture the steps performed by users (see e.g., \cite{DBLP:journals/corr/JamesWS14}). Often these steps
 are recorded in the form of workflows~\cite{goecks10galaxy}
 or in other standard formats~\cite{prov-dm}.
@@ -855,14 +874,14 @@ on arbitrary datasets and linking these artifacts with publications.
 Scientific workflow systems, such as Galaxy~\cite{goecks10galaxy} and 
 Kepler~\cite{CPE:CPE994}, provide
 the ability for users to create flexible analysis routines 
-comprised of various processing steps. They typically provide extensible
+comprising various processing steps. They typically provide extensible
 interfaces via which external data can be imported for analysis. 
 % Scientific workflows, by definition, capture a rich provenance trace
 % in the form of the workflow description. 
 While their goals overlap somewhat
-with the \wt\ there are significant differences between these systems.
+with the \wt, there are significant differences between these systems.
 Workflow systems prescribe a particular format and analysis model,
-they therefore require researchers modify their computational processes
+they therefore require researchers to modify their computational processes
 to fit their model. They do not support the range of interactive 
 and user-specific analyses enabled by the \wt.
 
@@ -879,7 +898,7 @@ The Cloud Kotta secure data enclave~\cite{babuji16kotta, babuji16secure}
 provides a co-located analysis framework that supports interactive Jupyter 
 notebooks and a batch submission system for analyzing sensitive
 data. These systems support only data stored within their
-respective repositories. The also do not provide a model for sharing analyses 
+respective repositories. They also do not provide a model for sharing analyses 
 in a standard format nor are they capable of capturing complete provenance. 
 
 The widespread adoption of interactive programming environments
@@ -905,18 +924,18 @@ Publishers are providing repository services either as standalone or in support 
 
 There are other general efforts aimed at aggregating 
 digital resources and capturing the provenance of research artifacts.
-W3C Prov~\cite{w3c-prov-primer} defines a model 
+W3C PROV~\cite{w3c-prov-primer} defines a model 
 for representing provenance using a data model that 
-represents the entities, people, and processes 
-associated with data.  
-The Research Object (RO)~\cite{bechhofer2010research}
+represents the entities (e.g., files), agents (e.g., people), and activities (e.g., computational processes)
+associated with data processing.  
+ Research Objects (RO)~\cite{bechhofer2010research}
 provides a model for capturing a single unit of research including, for example,
 the datasets, analysis scripts, and derived results associated 
-with a paper. The RO provides a formal specification for 
+with a paper. RO provides a formal specification for 
 encoding these objects, as well as associated attribution
-and provenance information. Both W3C Prov and ROs could 
-be used as a basis for representing a tale. We are actively
-exploring interoperability between these models.
+and provenance information. W3C PROV and ProvONE \cite{cuevas2015provone},  a PROV extension 
+to link prospective and retrospective provenance \cite{mcphillips2015retrospective}, have been incorporated into DataONE \cite{cao_dataone:_2016}. 
+We will be adding similar provenance support to \wt\ in the future.
 
 \section{Summary}\label{sec:summary}
 
@@ -932,26 +951,30 @@ computation in isolated containers, and ultimately
 publication of verifiable and reproducible processes
 using these artifacts. 
 
-The \wt\ architecture is comprised of a set
-of microservices (e.g., data
+The \wt\ architecture consists of a set
+of microservices (e.g., for data
 access, persistent identifier creation, etc.) and
 interoperability software that leverages, where possible, 
 existing cyberinfrastructure. The resulting services
 not only provide value to end users through the \wt\ 
- web interface but also application developers through
-its REST APIs. 
+ web interface but also to application developers through
+REST APIs. 
 % Its services could, for example, be leveraged
 % by other science gateways to provide a variety of functions. 
-We are actively working with several science communities
+Through a number of \wt\ working groups, we are actively engaging several science communities
 to pilot these capabilities and evaluate their use for
 enabling reproducible science.
 
 \section*{Acknowledgments}
+%\paragraph{\textbf{\textup{Acknowledgments}}} 
 This research was supported by NSF grant
-1541450 (CC*DNI DIBBS: Merging Science and Cyberinfrastructure Pathways: The \wt).
+1541450: \emph{CC*DNI DIBBS: Merging Science and Cyberinfrastructure Pathways: The \wt}.
 
 \section*{References}
-\bibliographystyle{elsarticle-num}
+
+\small
+%\bibliographystyle{elsarticle-num}
+\bibliographystyle{alpha-initials-big}
 %%%%%%%%%%%%%%%%%%%%%%%
 \bibliography{references}
 
